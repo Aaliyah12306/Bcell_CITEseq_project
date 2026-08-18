@@ -1,0 +1,132 @@
+subset	marker	type	evidence	PMID_or_DOI	notes
+Stromal | ADAMDEC1+ fibroblast	ADAMDEC1	mRNA	Single-cell analysis of stricturing Crohn intestinal fibroblasts	DOI:10.1053/j.gastro.2023.07.014	Gut fibroblast marker; assess together with CXCL14/CDH11.
+Stromal | ADAMDEC1+ fibroblast	CXCL14	mRNA	Single-cell analysis of stricturing Crohn intestinal fibroblasts	DOI:10.1053/j.gastro.2023.07.014	Not exclusive; spatial context improves specificity.
+Stromal | ADAMDEC1+ fibroblast	CDH11	mRNA	Single-cell analysis of stricturing Crohn intestinal fibroblasts	DOI:10.1053/j.gastro.2023.07.014	Fibroblast activation/adhesion marker.
+Stromal | RSPO3+ niche fibroblast	RSPO3	mRNA	Human intestinal single-cell stromal atlas	PMID:31303374; DOI:10.1016/j.cell.2019.06.029	WNT-supporting niche fibroblast marker; original disease cohort was colonic UC, not ileal CD.
+Stromal | RSPO3+ niche fibroblast	WNT2B	mRNA	Human intestinal single-cell stromal atlas	PMID:31303374; DOI:10.1016/j.cell.2019.06.029	Use with RSPO3 and stromal identity.
+Stromal | RSPO3+ niche fibroblast	WNT5B	mRNA	Human intestinal single-cell stromal atlas	PMID:31303374; DOI:10.1016/j.cell.2019.06.029	Context marker; not specific alone.
+Stromal | FAP+ profibrotic fibroblast	FAP	mRNA	scRNA-seq of fibrotic and nonfibrotic ileal Crohn tissue	PMID:39024569; DOI:10.1172/JCI179472	Direct ileal-CD evidence; combine with collagen/TWIST1 program.
+Stromal | FAP+ profibrotic fibroblast	TWIST1	mRNA	scRNA-seq and functional analysis of ileal Crohn fibrosis	PMID:39024569; DOI:10.1172/JCI179472	Profibrotic transcriptional regulator.
+Stromal | FAP+ profibrotic fibroblast	COL1A1	mRNA	scRNA-seq and functional analysis of ileal Crohn fibrosis	PMID:39024569; DOI:10.1172/JCI179472	Matrix marker; shared by multiple fibroblast states.
+Stromal | inflammatory fibroblast	MMP1	mRNA	Single-cell/spatial stricturing Crohn fibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Direct Crohn evidence.
+Stromal | inflammatory fibroblast	MMP3	mRNA	Single-cell/spatial stricturing Crohn fibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Direct Crohn evidence.
+Stromal | inflammatory fibroblast	CXCL5	mRNA	Single-cell/spatial stricturing Crohn fibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Inflammatory chemokine; not fibroblast-specific alone.
+Stromal | inflammatory fibroblast	CHI3L1	mRNA	Single-cell/spatial stricturing Crohn fibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Also expressed by myeloid cells; require stromal context.
+Stromal | collagen-high fibroblast	SFRP4	mRNA	Single-cell/spatial stricturing Crohn fibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Matrix-remodeling fibroblast state.
+Stromal | collagen-high fibroblast	COMP	mRNA	Single-cell/spatial stricturing Crohn fibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Extracellular-matrix marker.
+Stromal | collagen-high fibroblast	SERPINE1	mRNA	Single-cell/spatial stricturing Crohn fibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Activation/fibrosis marker; not specific alone.
+Stromal | tissue fibroblast	COL14A1	mRNA	Single-cell/spatial stricturing Crohn fibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Homeostatic matrix fibroblast program.
+Stromal | tissue fibroblast	PI16	mRNA	Single-cell/spatial stricturing Crohn fibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Shared across adventitial-like fibroblasts.
+Stromal | tissue fibroblast	LUM	mRNA	Single-cell/spatial stricturing Crohn fibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Pan-fibroblast matrix marker; not subtype-specific alone.
+Stromal | myofibroblast	LMOD1	mRNA	Single-cell/spatial stricturing Crohn mural/myofibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Contractile program.
+Stromal | myofibroblast	CNN1	mRNA	Single-cell/spatial stricturing Crohn mural/myofibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Also smooth muscle; use matrix/fibroblast context.
+Stromal | myofibroblast	MYLK	mRNA	Single-cell/spatial stricturing Crohn mural/myofibroblast label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Contractile program; not specific alone.
+Stromal | pericyte	PDGFRB	mRNA	Single-cell/spatial stricturing Crohn pericyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Canonical mural-cell marker.
+Stromal | pericyte	NOTCH3	mRNA	Single-cell/spatial stricturing Crohn pericyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Use with PDGFRB and vascular position.
+Stromal | contractile pericyte/RERGL+ mural cell	RERGL	mRNA	Single-cell/spatial stricturing Crohn contractile-pericyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Label may map to smooth-muscle-like mural cells depending on reference.
+Stromal | contractile pericyte/RERGL+ mural cell	PLN	mRNA	Single-cell/spatial stricturing Crohn contractile-pericyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Contractile-state marker.
+Stromal | contractile pericyte/RERGL+ mural cell	PPP1R14A	mRNA	Single-cell/spatial stricturing Crohn contractile-pericyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Contractile-state marker.
+Stromal | smooth muscle	MYH11	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Canonical smooth-muscle marker; combine with ACTG2/DES.
+Stromal | smooth muscle	ACTG2	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Visceral smooth-muscle contractile marker.
+Stromal | smooth muscle	DES	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Shared with other muscle-lineage cells.
+T cell | CD4 conventional	CD4	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Use with CD3D/E and exclude FOXP3-high Treg.
+T cell | CD4 conventional	IL7R	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Common in memory CD4 states; not universal.
+T cell | CD8	CD8A	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Also expressed by some IEL/NK-like populations; require CD3 genes.
+T cell | CD8	CD8B	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	More T-lineage-restricted than CD8A in this context.
+T cell | naive	CCR7	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Combine with SELL/TCF7/LEF1.
+T cell | naive	SELL	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	L-selectin; can persist in central memory.
+T cell | naive	TCF7	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Stem/naive-associated transcription factor.
+T cell | naive	LEF1	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Use with CCR7 and SELL.
+T cell | CCR7-high CD4	CCR7	mRNA	Single-cell/spatial stricturing Crohn study; CCR7-high CD4 cells increased in strictures	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Disease-associated abundance, but marker is shared with naive/central-memory T cells.
+T cell | CCR7-high CD4	LTB	mRNA	Single-cell/spatial stricturing Crohn CCR7-high CD4 label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Lymphoid-organizing signal; not subtype-specific alone.
+T cell | CCR7-high CD4	IL7R	mRNA	Single-cell/spatial stricturing Crohn CCR7-high CD4 label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Use in a panel.
+T cell | Th17	RORC	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Core Th17 program.
+T cell | Th17	CCR6	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Also on other mucosal lymphocytes.
+T cell | Th17	IL17A	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Activation-dependent and sparse in scRNA-seq.
+T cell | Th17	IL23R	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Mucosal Th17/ILC-associated; require T-cell identity.
+T cell | regulatory T	FOXP3	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Core Treg identity marker.
+T cell | regulatory T	IL2RA	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	CD25; can be induced in activated conventional T cells.
+T cell | regulatory T	CTLA4	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Activation/regulatory marker; use with FOXP3.
+T cell | regulatory T	ENTPD1	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	CD39; marks activated/suppressive states but is not Treg-specific.
+T cell | T follicular helper	CXCR5	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Use with BCL6/PDCD1/ICOS.
+T cell | T follicular helper	BCL6	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Core Tfh transcription factor; also in GC B cells, so require T-cell identity.
+T cell | T follicular helper	PDCD1	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	PD-1; also activation/exhaustion-associated.
+T cell | T follicular helper	CXCL13	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Activated/terminal Tfh-associated chemokine.
+T cell | CD8 effector	KLRG1	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Effector differentiation marker.
+T cell | CD8 effector	GZMB	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Cytotoxic program; also NK/myeloid contexts.
+T cell | CD8 effector	PRF1	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Cytotoxic program.
+T cell | CD8 tissue-resident IEL	ITGAE	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	CD103; use with CD160 and epithelial location.
+T cell | CD8 tissue-resident IEL	CD160	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	IEL/resident cytotoxic marker; not exclusive.
+T cell | CD8 tissue-resident IEL	ENTPD1	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Separates an activated resident subset; not universal.
+T cell | gamma-delta IEL	TRDC	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Gamma-delta TCR constant gene.
+T cell | gamma-delta IEL	NCR3	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	NKp30-associated mucosal gamma-delta state; not present in all gamma-delta cells.
+T cell | gamma-delta IEL	RORC	mRNA	Single-cell terminal-ileum Crohn T-cell atlas	PMID:33771991; DOI:10.1038/s41467-021-22164-6	Marks IL-17/IL-22-associated gamma-delta state.
+Endothelial | pan-endothelial	PECAM1	mRNA	Single-cell/spatial stricturing Crohn endothelial labels	PMID:40562913; DOI:10.1038/s41588-025-02225-y	CD31; pan-endothelial, not subtype-specific.
+Endothelial | pan-endothelial	VWF	mRNA	Single-cell/spatial stricturing Crohn endothelial labels	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Pan-endothelial/vascular marker.
+Endothelial | pan-endothelial	CLDN5	mRNA	Single-cell/spatial stricturing Crohn endothelial labels	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Vascular barrier marker.
+Endothelial | arterial	SOX17	mRNA	Single-cell/spatial stricturing Crohn arterial-endothelial label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Use with endothelial identity and arterial anatomy.
+Endothelial | arterial	EFNB2	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Conserved arterial identity marker.
+Endothelial | arterial	GJA5	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Arterial/arteriolar endothelial marker.
+Endothelial | venous/HEV-like	ACKR1	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Post-capillary venule/HEV-like marker; absent from many ordinary veins.
+Endothelial | venous/HEV-like	SELP	mRNA	Single-cell/spatial stricturing Crohn venous-endothelial labels	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Activated venous/adhesion program; inflammation-sensitive.
+Endothelial | capillary	RGCC	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Capillary endothelial program.
+Endothelial | capillary	CA4	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Capillary subtype marker; expression varies by tissue zone.
+Endothelial | capillary	EMCN	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Microvascular marker.
+Endothelial | lymphatic	CCL21	mRNA	Single-cell/spatial stricturing Crohn lymphatic-endothelial label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Lymphatic chemokine; can also be expressed by stromal cells.
+Endothelial | lymphatic	LYVE1	mRNA	Single-cell/spatial stricturing Crohn lymphatic-endothelial label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Also in resident macrophages; require endothelial genes.
+Endothelial | lymphatic	PROX1	mRNA	Single-cell/spatial stricturing Crohn lymphatic-endothelial label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Core lymphatic identity transcription factor.
+Endothelial | lymphatic	FLT4	mRNA	Single-cell/spatial stricturing Crohn lymphatic-endothelial label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	VEGFR3; pair with PROX1/CCL21.
+Endothelial | angiogenic tip-like	APLN	mRNA	Single-cell endothelial atlas defining conserved tip-cell program	DOI:10.1016/j.ccell.2020.01.015	High-impact vascular reference, not ileum-specific; confirm in ileal data.
+Endothelial | angiogenic tip-like	ESM1	mRNA	Single-cell endothelial atlas defining conserved tip-cell program	DOI:10.1016/j.ccell.2020.01.015	Angiogenic tip-like marker; inflammation/tumor vascular reference.
+Endothelial | angiogenic tip-like	PGF	mRNA	Single-cell endothelial atlas defining conserved tip-cell program	DOI:10.1016/j.ccell.2020.01.015	Use with APLN/ESM1 and endothelial identity.
+Epithelial | stem	OLFM4	mRNA	Single-cell/spatial stricturing Crohn epithelial label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Crypt-base stem/progenitor marker; also marks early progenitors.
+Epithelial | stem	LGR5	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Canonical cycling stem-cell marker; sparse in scRNA-seq.
+Epithelial | stem	SMOC2	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Crypt stem/progenitor-associated.
+Epithelial | transit-amplifying	MKI67	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Proliferation marker; not epithelial-specific without EPCAM/KRT context.
+Epithelial | transit-amplifying	TOP2A	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Cycling G2/M program.
+Epithelial | enterocyte	FABP1	mRNA	Single-cell/spatial stricturing Crohn enterocyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Mature absorptive enterocyte marker.
+Epithelial | enterocyte	ALDOB	mRNA	Single-cell/spatial stricturing Crohn enterocyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Mature absorptive/metabolic program.
+Epithelial | enterocyte	SI	mRNA	Single-cell/spatial stricturing Crohn enterocyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Brush-border enzyme.
+Epithelial | enterocyte	APOA4	mRNA	Single-cell/spatial stricturing Crohn enterocyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Mature small-intestinal enterocyte marker.
+Epithelial | goblet	MUC2	mRNA	Single-cell/spatial stricturing Crohn goblet-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Canonical intestinal goblet mucin.
+Epithelial | goblet	CLCA1	mRNA	Single-cell/spatial stricturing Crohn goblet-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Mature goblet marker.
+Epithelial | goblet	SPINK4	mRNA	Single-cell/spatial stricturing Crohn goblet-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Goblet secretory program.
+Epithelial | Paneth	DEFA5	mRNA	Single-cell/spatial stricturing Crohn Paneth-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Canonical small-intestinal Paneth defensin.
+Epithelial | Paneth	DEFA6	mRNA	Single-cell/spatial stricturing Crohn Paneth-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Canonical small-intestinal Paneth defensin.
+Epithelial | Paneth	REG3A	mRNA	Single-cell/spatial stricturing Crohn Paneth-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Antimicrobial epithelial marker; can rise in inflammation.
+Epithelial | enteroendocrine	CHGA	mRNA	Single-cell/spatial stricturing Crohn enteroendocrine-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Pan-enteroendocrine secretory-granule marker.
+Epithelial | enteroendocrine	CHGB	mRNA	Single-cell/spatial stricturing Crohn enteroendocrine-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Use with CHGA/SYP.
+Epithelial | enteroendocrine	SYP	mRNA	Single-cell/spatial stricturing Crohn enteroendocrine-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Neuroendocrine vesicle marker.
+Epithelial | tuft	POU2F3	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Core tuft-cell transcription factor.
+Epithelial | tuft	TRPM5	mRNA	Single-cell/spatial stricturing Crohn epithelial reference and intestinal atlas	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Chemosensory tuft-cell channel; pair with POU2F3.
+Epithelial | BEST4+ absorptive	BEST4	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Specialized absorptive epithelial state.
+Epithelial | BEST4+ absorptive	OTOP2	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Use with BEST4 and CA7.
+Epithelial | BEST4+ absorptive	CA7	mRNA	Human intestinal single-cell atlas	PMID:34497389; DOI:10.1038/s41586-021-03852-1	Specialized absorptive program; abundance varies by region.
+Myeloid | classical monocyte	S100A8	mRNA	Single-cell/spatial stricturing Crohn monocyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Inflammatory/classical monocyte marker; also neutrophils.
+Myeloid | classical monocyte	S100A9	mRNA	Single-cell/spatial stricturing Crohn monocyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Use with FCN1/CTSS and exclude CSF3R/FCGR3B-high neutrophils.
+Myeloid | inflammatory monocyte	IL1B	mRNA	Single-cell/spatial stricturing Crohn monocyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Activation-dependent; not lineage-specific alone.
+Myeloid | inflammatory monocyte	CXCL8	mRNA	Single-cell/spatial stricturing Crohn monocyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Inflammatory chemokine; also epithelial/stromal sources.
+Myeloid | inflammatory monocyte	SLC11A1	mRNA	Single-cell/spatial stricturing Crohn monocyte label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Myeloid antimicrobial program.
+Myeloid | tissue macrophage	C1QC	mRNA	Single-cell/spatial stricturing Crohn tissue-macrophage label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Resident/mature macrophage complement program.
+Myeloid | tissue macrophage	CSF1R	mRNA	Single-cell/spatial stricturing Crohn tissue-macrophage label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Mononuclear-phagocyte lineage marker.
+Myeloid | tissue macrophage	FCER1G	mRNA	Single-cell/spatial stricturing Crohn tissue-macrophage label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Broad myeloid marker; not subtype-specific alone.
+Myeloid | resident/LYVE1+ macrophage	LYVE1	mRNA	Single-cell IBD myeloid atlas	PMID:37495570; DOI:10.1038/s41467-023-40156-6	Also lymphatic endothelium; require PTPRC/myeloid context.
+Myeloid | resident/LYVE1+ macrophage	FOLR2	mRNA	Single-cell IBD myeloid atlas	PMID:37495570; DOI:10.1038/s41467-023-40156-6	Resident macrophage marker.
+Myeloid | resident/LYVE1+ macrophage	MRC1	mRNA	Single-cell IBD myeloid atlas	PMID:37495570; DOI:10.1038/s41467-023-40156-6	CD206; also other macrophage states.
+Myeloid | inflammatory macrophage	CHI3L1	mRNA	Single-cell IBD myeloid atlas	PMID:37495570; DOI:10.1038/s41467-023-40156-6	Also inflammatory fibroblasts; require myeloid context.
+Myeloid | inflammatory macrophage	MMP9	mRNA	Single-cell IBD myeloid atlas	PMID:37495570; DOI:10.1038/s41467-023-40156-6	Inflammatory/remodeling program.
+Myeloid | cDC1	CLEC9A	mRNA	Single-cell/spatial stricturing Crohn dendritic-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Canonical cDC1 marker.
+Myeloid | cDC1	XCR1	mRNA	Single-cell/spatial stricturing Crohn dendritic-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Canonical cDC1 chemokine receptor.
+Myeloid | cDC1	IRF8	mRNA	Single-cell/spatial stricturing Crohn dendritic-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Lineage regulator; also other myeloid cells.
+Myeloid | cDC2	CD1C	mRNA	Single-cell/spatial stricturing Crohn dendritic-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Canonical cDC2 marker; can occur in monocyte-like cells.
+Myeloid | cDC2	FCER1A	mRNA	Single-cell/spatial stricturing Crohn dendritic-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Use with CD1C and HLA-DRA.
+Myeloid | migratory DC	CCR7	mRNA	Single-cell/spatial stricturing Crohn CCR7-high dendritic-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Activation/migration marker; also T cells.
+Myeloid | migratory DC	LAMP3	mRNA	Single-cell IBD myeloid atlas	PMID:37495570; DOI:10.1038/s41467-023-40156-6	Mature migratory DC program.
+Myeloid | migratory DC	FSCN1	mRNA	Single-cell IBD myeloid atlas	PMID:37495570; DOI:10.1038/s41467-023-40156-6	Mature migratory DC cytoskeletal program.
+Myeloid | neutrophil	CSF3R	mRNA	Single-cell/spatial stricturing Crohn neutrophil label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Strong granulocyte-lineage marker.
+Myeloid | neutrophil	FCGR3B	mRNA	Single-cell/spatial stricturing Crohn neutrophil label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Neutrophil-restricted relative to FCGR3A.
+Myeloid | neutrophil	FPR1	mRNA	Single-cell/spatial stricturing Crohn neutrophil label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Granulocyte chemotaxis marker.
+Myeloid | mast cell	TPSAB1	mRNA	Single-cell/spatial stricturing Crohn mast-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Canonical mast-cell tryptase.
+Myeloid | mast cell	KIT	mRNA	Single-cell/spatial stricturing Crohn mast-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Also other progenitor contexts; use with tryptases/CPA3.
+Myeloid | mast cell	CPA3	mRNA	Single-cell/spatial stricturing Crohn mast-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Mast-cell protease marker.
+Myeloid | mast cell	MS4A2	mRNA	Single-cell/spatial stricturing Crohn mast-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Fc epsilon receptor beta; combine with KIT/TPSAB1.

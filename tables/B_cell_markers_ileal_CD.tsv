@@ -1,0 +1,51 @@
+subset	marker	type	evidence	PMID_or_DOI	notes
+Naive B	TCL1A	mRNA	Appendix CITE-seq RNA/ADT reference; naive-cluster annotation	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Use with IGHD and absence of CD27; TCL1A also occurs in transitional cells.
+Naive B	IGHD	mRNA	Appendix CITE-seq RNA/ADT reference; naive and IgD-positive compartments	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Pair with IGHM; distinguish from unswitched memory using CD27 and broader state.
+Naive B	CD27 (negative/low)	protein/ADT	Appendix CITE-seq surface phenotype	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Negative marker; combine with IgD positivity.
+Transitional B	CD10/MME	protein/ADT	Appendix CITE-seq surface phenotype; transitional cluster was CD10-positive	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Protein name CD10; gene symbol MME.
+Transitional B	CD24 (high)	protein/ADT	Human transitional B-cell phenotype with gut-homing maturation analysis	PMID:33538776; DOI:10.1084/jem.20202001	Combine with high CD38; not specific alone.
+Transitional B	CD38 (high)	protein/ADT	Human transitional B-cell phenotype with gut-homing maturation analysis	PMID:33538776; DOI:10.1084/jem.20202001	Also high on plasmablasts; require CD24-high/CD10-positive context.
+Germinal-center B, centroblast	BCL6	mRNA	Human GALT germinal-center B-cell annotation	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Core GC identity marker; pair with proliferation markers.
+Germinal-center B, centroblast	MKI67	mRNA	Appendix CITE-seq distinguished Ki67-positive centroblasts	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Proliferation marker, not B-cell-specific.
+Germinal-center B, centrocyte	BCL6	mRNA	Human GALT germinal-center B-cell annotation	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Interpret with low MKI67 relative to centroblasts.
+Germinal-center B, centrocyte	MKI67 (low/negative)	mRNA	Appendix CITE-seq distinguished Ki67-negative centrocytes	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Negative/relative marker.
+Marginal-zone/unswitched-memory B	CD27	protein/ADT	GALT MZ-like B-cell phenotype and appendix CITE-seq annotation	PMID:30242242; DOI:10.1038/s41467-018-06089-1	Use with IgM and IgD; MZ-like and IgM-memory labels are not always interchangeable.
+Marginal-zone/unswitched-memory B	IgM/IGHM	protein/ADT	GALT MZ-like B-cell phenotype	PMID:30242242; DOI:10.1038/s41467-018-06089-1	Surface IgM-high with CD27 positivity supports MZ-like/unswitched memory.
+Marginal-zone/unswitched-memory B	IgD/IGHD	protein/ADT	GALT MZ-like B-cell phenotype	PMID:30242242; DOI:10.1038/s41467-018-06089-1	Use jointly with CD27 and IgM.
+Marginal-zone B	NOTCH2	mRNA	Appendix multi-omics study linked MZ B cells to DLL1-NOTCH2 signaling	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Pathway-associated marker; not sufficient alone.
+IgM-only memory B	IGHM	mRNA	Appendix CITE-seq defined a distinct IgM-only population	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Lower IgD and CD1c than MZ cells in this reference.
+IgM-only memory B	IGHD (low)	mRNA	Appendix CITE-seq contrast with MZ B cells	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Relative negative marker.
+Class-switched memory B	CD27	protein/ADT	Appendix CITE-seq surface phenotype for class-switched memory	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	CD27-positive with non-IgM/IgD isotypes.
+Class-switched memory B	IGHA1	mRNA	Human GALT class-switched memory/plasma lineage	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	One switched isotype; separate memory from plasma cells using MZB1/XBP1/SDC1.
+Class-switched memory B	IGHG1	mRNA	Human GALT class-switched memory/plasma lineage	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	One switched isotype; interpret with CD27 and plasma-cell program.
+Double-negative memory B (DN1-like)	CD27 (negative)	protein/ADT	Human double-negative B-cell framework	PMID:30314758; DOI:10.1016/j.immuni.2018.08.015	Defines double-negative phenotype together with IgD loss; DN1 is CD11c-low/CXCR5-positive relative to DN2.
+Double-negative memory B (DN1-like)	IgD (negative)	protein/ADT	Human double-negative B-cell framework	PMID:30314758; DOI:10.1016/j.immuni.2018.08.015	Negative marker; distinguish DN1 from DN2 with CD11c, CXCR5 and T-bet/FCRL programs.
+Age-associated B / DN2	CD11c/ITGAX	protein/ADT	Human DN2 definition and appendix DN2 validation	PMID:30314758; DOI:10.1016/j.immuni.2018.08.015	High CD11c supports DN2/ABC-like identity; also appears on activated-naive B cells.
+Age-associated B / DN2	TBX21	mRNA	Human DN2 transcriptional network	PMID:30314758; DOI:10.1016/j.immuni.2018.08.015	T-bet program; evidence is not ileal-CD-specific.
+Age-associated B / DN2	FCRL4	protein/ADT	Appendix CITE-seq and spatial protein validation of DN2 cells	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Strong GALT-associated inhibitory receptor in this reference.
+Age-associated B / DN2	FCRL5	mRNA	Appendix CITE-seq DN2 annotation	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Also elevated in activated-naive cells; use a panel.
+Age-associated B / DN2	CXCR5 (low/negative)	protein/ADT	Human DN2 definition	PMID:30314758; DOI:10.1016/j.immuni.2018.08.015	Negative/relative marker.
+Age-associated B / DN2	CD21/CR2 (low/negative)	protein/ADT	Appendix DN2 surface phenotype	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Negative/relative marker.
+Activated-naive B (aNAV)	CD11c/ITGAX	protein/ADT	Appendix CITE-seq activated-naive cluster	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Distinguish from DN2 by naive/isotype context and broader transcriptome.
+Activated-naive B (aNAV)	FCRL5	mRNA	Appendix CITE-seq activated-naive cluster	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Shared with DN2; not sufficient alone.
+Activated B (ActB3, paper-defined)	MALAT1 (high)	mRNA	Appendix CITE-seq paper-defined ActB3 cluster	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	MALAT1 is ubiquitous and stress-sensitive; reproduce only with full reference mapping, not as a stand-alone marker.
+Plasmablast	MZB1	mRNA	Appendix CITE-seq plasmablast annotation	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Secretory-cell program; also present in mature plasma cells.
+Plasmablast	SLAMF7	mRNA	Appendix CITE-seq plasmablast annotation	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Use with high immunoglobulin and reduced MS4A1/CD19.
+Plasmablast	CD38 (high)	protein/ADT	Human B-cell maturation and plasmablast phenotype	PMID:33579751; DOI:10.1126/sciimmunol.abe6291	Also high on transitional B cells; require antibody-secreting-cell program.
+Plasmablast	MS4A1 (low/negative)	mRNA	Appendix CITE-seq plasmablast annotation	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Relative negative marker.
+Plasma cell	SDC1	mRNA	Single-cell/spatial stricturing Crohn study plasma-cell labels	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Canonical CD138 gene; combine with XBP1/MZB1.
+Plasma cell	XBP1	mRNA	Single-cell/spatial stricturing Crohn study plasma-cell labels	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Secretory unfolded-protein-response program.
+Plasma cell	TNFRSF17	mRNA	Single-cell/spatial stricturing Crohn study plasma-cell labels	PMID:40562913; DOI:10.1038/s41588-025-02225-y	BCMA; useful with SDC1 and MZB1.
+IgA plasma cell	IGHA1	mRNA	Single-cell/spatial stricturing Crohn study IgA plasma-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Isotype marker; pair with plasma-cell program.
+IgA plasma cell	IGHA2	mRNA	Single-cell/spatial stricturing Crohn study IgA plasma-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Common mucosal IgA isotype; pair with JCHAIN/MZB1.
+IgA plasma cell	JCHAIN	mRNA	Single-cell/spatial stricturing Crohn study IgA plasma-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Supports polymeric IgA/IgM secretion; not isotype-specific alone.
+IgG plasma cell (CD-associated)	IGHG2	mRNA	Single-cell/spatial stricturing Crohn study IgG plasma-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Use with SDC1/MZB1; IgG plasma cells were increased in stricturing disease.
+IgG plasma cell (CD-associated)	IGHG3	mRNA	Single-cell/spatial stricturing Crohn study IgG plasma-cell label	PMID:40562913; DOI:10.1038/s41588-025-02225-y	Isotype marker; verify donor-specific expression and ambient RNA.
+IgG plasma cell (CD-associated)	MZB1	mRNA	Ileal Crohn cellular module included IgG plasma cells; later stricturing-CD reference resolved plasma markers	PMID:31474370; DOI:10.1016/j.cell.2019.08.008	Not IgG-specific; require IGHG co-expression.
+Regulatory B (IL-10-competent transitional-like)	IL10	mRNA	Human intestinal/blood regulatory-B analysis including Crohn comparators	PMID:26980839; DOI:10.1093/ecco-jcc/jjw074	Low and stimulation-dependent in scRNA-seq; absence does not exclude function.
+Regulatory B (IL-10-competent transitional-like)	CD24 (high)	protein/ADT	Human regulatory-B phenotype including Crohn comparators	PMID:26980839; DOI:10.1093/ecco-jcc/jjw074	Not unique to Bregs; combine with CD38-high and functional IL-10 assay.
+Regulatory B (IL-10-competent transitional-like)	CD38 (high)	protein/ADT	Human regulatory-B phenotype including Crohn comparators	PMID:26980839; DOI:10.1093/ecco-jcc/jjw074	Not unique to Bregs; study primarily concerned ulcerative colitis and had small Crohn comparator groups.
+Regulatory B (CD5-positive candidate)	CD5	protein/ADT	Human regulatory-B phenotype including intestinal samples	PMID:26980839; DOI:10.1093/ecco-jcc/jjw074	Candidate phenotype, not a unique lineage marker; require IL-10/function.
+DN2 regulatory-like GALT state	CD86	protein/ADT	Appendix spatial multi-omics; DN2 protein expression validated by imaging	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Immunomodulatory DN2 state, not interchangeable with classical IL-10-positive Breg.
+DN2 regulatory-like GALT state	GRN	mRNA	Appendix spatial multi-omics; RNAscope/imaging validation	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Paper linked GRN to TNFRSF1A/B interactions; healthy appendix reference, not Crohn-specific.
+DN2 regulatory-like GALT state	EBI3	mRNA	Appendix spatial multi-omics; RNAscope/imaging validation	PMID:42247482; DOI:10.1126/sciimmunol.ady8948	Paper linked EBI3 to IL27RA/IL6ST interactions; healthy appendix reference, not Crohn-specific.
