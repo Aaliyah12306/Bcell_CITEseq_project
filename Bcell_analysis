@@ -1,0 +1,169 @@
+# ============================================================
+# 加载包
+# ============================================================
+library(Seurat)
+library(dplyr)
+library(ggplot2)
+library(harmony)
+library(clustree)
+
+# ============================================================
+# 1. 读取 B_cell 最终对象
+# ============================================================
+seurat_obj <- readRDS("subset/WholeTissueData_B_cell_final.rds")
+# 保存 PDF
+dir.create("subset/B_cell_result_clean", showWarnings = FALSE, recursive = TRUE)
+result_dir <- file.path("subset/B_cell_result_clean")
+name<-"B_cell"
+# ============================================================
+# 2. 设置身份为分辨率 0.7
+# ============================================================
+Idents(seurat_obj) <- "RNA_snn_res.0.7"
+
+# ============================================================
+# 3. 提取目标聚类 (0-12, 16, 20)
+# ============================================================
+clusters_to_keep <- c(0:12, 16, 20)
+subset_obj <- subset(seurat_obj, idents = clusters_to_keep)
+cat("提取后细胞数:", ncol(subset_obj), "\n")
+table(Idents(subset_obj))
+# ============================================================
+# 4. 重新标准化、PCA、Harmony 去批次
+# ============================================================
+DefaultAssay(subset_obj) <- "RNA"
+
+# 清空旧数据（避免干扰）
+subset_obj[["RNA"]]$scale.data <- NULL
+subset_obj[["RNA"]]$data <- NULL
+
+subset_obj <- NormalizeData(subset_obj, verbose = FALSE)
+subset_obj <- FindVariableFeatures(subset_obj, selection.method = "vst",
+                                   nfeatures = 3000, verbose = FALSE)
+subset_obj <- ScaleData(subset_obj, features = VariableFeatures(subset_obj),
+                        verbose = FALSE)
+subset_obj <- RunPCA(subset_obj, features = VariableFeatures(subset_obj),
+                     npcs = 50, verbose = FALSE)
+
+# Harmony 校正（按 sample_id）
+subset_obj <- RunHarmony(subset_obj, group.by.vars = "sample_id",
+                         reduction = "pca", reduction.save = "harmony",
+                         verbose = FALSE)
+
+# ============================================================
+# 5. 重新聚类（基于 Harmony 空间）
+# ============================================================
+# 使用 Harmony 降维后的前 30 个维度
+subset_obj <- FindNeighbors(subset_obj, reduction = "pca", dims = 1:30)
+subset_obj <- FindClusters(subset_obj, resolution = 0.7, algorithm = 1, 
+                           graph.name = "RNA_snn") 
+subset_obj <- RunUMAP(subset_obj, reduction = "pca", dims = 1:30, 
+                      reduction.name = "pca.umap")
+# 使用 Harmony 降维后的前 30 个维度
+subset_obj <- FindNeighbors(subset_obj, reduction = "harmony", dims = 1:30)
+subset_obj <- FindClusters(subset_obj, resolution = 0.7, algorithm = 1, 
+                           graph.name = "RNA_snn")
+subset_obj <- RunUMAP(subset_obj, reduction = "harmony", dims = 1:30, 
+                      reduction.name = "harmony.umap")
+# 批次效应对比图
+# ============================================================
+p_batch_before <- DimPlot(subset_obj, reduction = "pca.umap", group.by = "sample_id", pt.size = 0.5) +
+  ggtitle(paste(name, "- Before Integration (PCA)"))
+
+p_batch_after <- DimPlot(subset_obj, reduction = "harmony.umap", group.by = "sample_id", pt.size = 0.5) +
+  ggtitle(paste(name, "- After Integration (Harmony)"))
+
+pdf(file.path(result_dir, "batch_effect_comparison.pdf"), width = 16, height = 7)
+print(p_batch_before + p_batch_after)
+dev.off()
+cat("  批次效应对比图已保存\n")
+# 多分辨率 + Clustree
+subset_obj <- FindClusters(subset_obj, resolution = seq(0.5, 1.1, 0.2),
+                           algorithm = 1, verbose = FALSE)
+pdf(file.path(result_dir, "clustree_analysis.pdf"), width = 12, height = 18)
+print(clustree(subset_obj@meta.data, prefix = "RNA_snn_res.")); dev.off()
+
+# 保存
+saveRDS(subset_obj, file.path("subset", paste0("WholeTissueData_", name, "_clean.rds")))
+
+# ============================================================
+# 6. 定义您的 marker 列表（请使用英文引号）
+# ============================================================
+RNA_MARKERS <- c(
+  "MS4A1", "CD79A", "CD19", "TCL1A",
+  "IGHD", "IGHM", "IGHA1", "IGHG1",
+  "CD27", "CD1C", "CD24", "MALAT1",
+  "MME", "BCL6", "SERPINA9", "MKI67",
+  "CD38", "ITGAX", "FCRL4", "FCRL5",
+  "ZEB2", "CR2"
+)
+
+genes_avail <- intersect(RNA_MARKERS, rownames(subset_obj))
+cat("可用 marker 基因数:", length(genes_avail), "\n")
+# FindAllMarkers
+Idents(subset_obj) <- "RNA_snn_res.0.7"
+markers <- FindAllMarkers(subset_obj, only.pos = TRUE,
+                          min.pct = 0.25, logfc.threshold = 0.25)
+marker_dir <- file.path(result_dir, "cluster_markers")
+dir.create(marker_dir, showWarnings = FALSE, recursive = TRUE)
+write.csv(markers, file.path(marker_dir, paste0(name, "_markers_res_0.7.csv")),
+          row.names = FALSE)
+
+# Per-cluster DotPlot
+for (i in sort(unique(subset_obj@meta.data[["RNA_snn_res.0.7"]]))) {
+  tryCatch({
+    pdf(file.path(marker_dir, paste0("dotplot_top_cluster_", i, ".pdf")), width = 12, height = 6)
+    feats <- markers %>% filter(cluster == i, p_val_adj < 0.01) %>%
+      arrange(desc(avg_log2FC)) %>% slice_head(n = 50) %>% pull(gene) %>% unique()
+    if (length(feats) > 0)
+      print(DotPlot(subset_obj, features = feats, group.by = "RNA_snn_res.0.7",
+                    cols = c("#fcf8f2","red"), dot.scale = 8,
+                    col.min = 0, col.max = 5, scale.by = "radius") +
+              RotatedAxis() + ggtitle(paste("Cluster", i)))
+  }, error = function(e) cat("  Cluster", i, "失败\n"),
+  finally = { dev.off() })
+}
+
+# UMAP
+pdf(file.path(result_dir, paste0("umap_res0.7_sample_vs_cluster.pdf")),
+    width = 17, height = 7)
+print(DimPlot(subset_obj, reduction = "harmony.umap",
+              group.by = "sample_id", pt.size = 0.8, label = TRUE) +
+        ggtitle(paste(name, "- Sample")) +
+        DimPlot(subset_obj, reduction = "harmony.umap",
+                group.by = "RNA_snn_res.0.7", pt.size = 0.8, label = TRUE) +
+        ggtitle(paste(name, "- Res0.7")))
+dev.off()
+
+# Top50 + count + prop
+top50 <- markers %>% filter(p_val_adj < 0.01) %>%
+  arrange(cluster, desc(avg_log2FC)) %>%
+  group_by(cluster) %>% slice_head(n = 50) %>% ungroup()
+
+ct <- table(subset_obj@meta.data[["RNA_snn_res.0.7"]], subset_obj@meta.data$sample_id)
+cp <- prop.table(ct, margin = 1)
+count_df <- as.data.frame.matrix(ct); count_df$cluster <- rownames(count_df)
+prop_df  <- as.data.frame.matrix(round(cp, 4)); prop_df$cluster <- rownames(prop_df)
+
+merged <- merge(top50, count_df, by = "cluster", all.x = TRUE)
+merged <- merge(merged, prop_df, by = "cluster", all.x = TRUE)
+write.csv(merged, file.path(result_dir, paste0(name, "_top50_markers_with_sample_proportion.csv")),
+          row.names = FALSE)
+
+# ============================================================
+# 7. 绘制 DotPlot（按新的聚类标签）
+# ============================================================
+p <- DotPlot(subset_obj, features = rev(genes_avail), 
+             group.by ="RNA_snn_res.0.7",                        # 用新聚类
+             cols = c("#fcf8f2", "red"), dot.scale = 8,
+             col.min = 0, col.max = 5, scale.by = "radius") +
+  RotatedAxis() +
+  ggtitle(paste("B_cell selected clusters, re-clustered (res=0.7) – marker expression"))
+p_umap<- DimPlot(subset_obj, reduction = "harmony.umap",
+                 group.by ="RNA_snn_res.0.7", pt.size = 0.8, label = TRUE) +
+  ggtitle(paste(name, "- Res0.7"))
+
+pdf(file.path(result_dir,"dotplot_markers_reclustered.pdf"), width = 20, height = 8)
+print(p_umap+p)
+dev.off()
+
+cat("=== 全部完成，新对象已保存 ===\n")
