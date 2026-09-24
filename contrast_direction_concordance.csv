@@ -1,0 +1,4 @@
+dataset,contrast,n_comparable,n_nonzero_both,fraction_same_direction,spearman_delta,settings_match
+"JCI2024","Stricture_minus_Non_stricture",320832,6332,0.59886291850916,0.141948917020419,FALSE
+"SCP2959","Stricture_minus_Non_stricture",320832,5857,0.880484889875363,0.686690414643975,FALSE
+"SCP2959","Stricture_minus_Control",294096,5518,0.825661471547662,0.591532186433765,FALSE

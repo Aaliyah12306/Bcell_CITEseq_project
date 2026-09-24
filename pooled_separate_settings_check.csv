@@ -1,0 +1,14 @@
+parameter,identical
+min_cells_pooled,TRUE
+max_cells_per_type,TRUE
+type,TRUE
+trim,TRUE
+nboot,TRUE
+alpha,TRUE
+scale_factor,TRUE
+sampling_subtype_col,TRUE
+stratify_major_subsets,TRUE
+min_per_sampling_subtype,FALSE
+categories,TRUE
+population.size,TRUE
+database_snapshot,TRUE
